@@ -32,7 +32,7 @@
   "pre-commit": "lint:staged",
   "lint-staged": {
     "*.{ts,tsx}": [
-		"prettify"
+		"prettier --write --parser=typescript"
     ]
   },
   "eslintConfig": {
