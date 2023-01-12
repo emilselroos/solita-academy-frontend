@@ -1,4 +1,3 @@
-
 const Stations = () => {
 	return (
 		<div>
@@ -6,6 +5,6 @@ const Stations = () => {
 			<p>(total number of stations and journeys)</p>
 		</div>
 	);
-}
+};
 
 export default Stations;

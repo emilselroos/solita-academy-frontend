@@ -1,4 +1,3 @@
-
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Stations = () => {
@@ -7,6 +6,6 @@ const Stations = () => {
 			<p>stations page</p>
 		</div>
 	);
-}
+};
 
 export default Stations;

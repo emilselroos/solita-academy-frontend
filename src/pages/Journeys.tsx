@@ -1,4 +1,3 @@
-
 import ModeOfTravelIcon from '@mui/icons-material/ModeOfTravel';
 
 const Journeys = () => {
@@ -7,6 +6,6 @@ const Journeys = () => {
 			<p>journeys page</p>
 		</div>
 	);
-}
+};
 
 export default Journeys;
