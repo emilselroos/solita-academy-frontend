@@ -89,7 +89,6 @@ const Journeys = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 	const [journeys, setJourneys] = useState<IJourney[] | []>([]);
 	const [pageSize, setPageSize] = useState<number>(20);
-
 	useEffect(() => {
 		fetch(`${API_ENDPOINT}/journeys`)
 			.then((response) => response.json())

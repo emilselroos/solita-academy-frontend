@@ -75,7 +75,6 @@ const Stations = () => {
 				console.error(error);
 			});
 	}, []);
-
 	return (
 		<>
 			<Grid container alignItems="center" justifyContent="space-between">
