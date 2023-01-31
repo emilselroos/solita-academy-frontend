@@ -55,6 +55,13 @@ const theme = createTheme({
 				},
 			},
 		},
+		MuiCard: {
+			styleOverrides: {
+				root: {
+					padding: '1.5rem',
+				},
+			},
+		},
 
 		MuiButton: {
 			defaultProps: {
