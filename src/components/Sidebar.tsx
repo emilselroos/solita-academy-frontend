@@ -4,15 +4,11 @@ import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Typography from '@mui/material/Typography';
-
 import HomeIcon from '@mui/icons-material/Home';
 import PlaceIcon from '@mui/icons-material/Place';
 import ModeOfTravelIcon from '@mui/icons-material/ModeOfTravel';
 
-type Props = {};
-
-const Sidebar = ({}: Props) => {
+const Sidebar = () => {
 	return (
 		<Drawer variant="permanent" anchor="left">
 			<Link to={`/`}>
@@ -22,7 +18,6 @@ const Sidebar = ({}: Props) => {
 					alt="Epic Placeholder Logo"
 				/>
 			</Link>
-
 			<List>
 				{[
 					{ label: 'Dashboard', target: '' },
