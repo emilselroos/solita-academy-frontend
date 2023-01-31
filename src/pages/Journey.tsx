@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Skeleton from 'react-loading-skeleton';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import ButtonBack from '../components/ButtonBack';
 import { API_ENDPOINT } from '../CONSTANTS';
 
 interface IJourney {
@@ -34,7 +33,6 @@ interface IOriginStation {
 }
 
 const Journey = () => {
-	const navigate = useNavigate();
 	const { jid } = useParams();
 	const [journey, setJourney] = useState<IJourney | undefined>(undefined);
 
@@ -54,12 +52,7 @@ const Journey = () => {
 		<>
 			<Grid container alignItems="center" justifyContent="flex-start">
 				<Grid item>
-					<Button
-						onClick={() => navigate(-1)}
-						sx={{ marginRight: '1rem' }}
-					>
-						<ArrowBackIcon />
-					</Button>
+					<ButtonBack />
 				</Grid>
 				<Grid item>
 					<Typography variant="h1">
