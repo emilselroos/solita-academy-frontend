@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import Sidebar from '../components/Sidebar';
 
 type Props = {
 	children?: React.ReactNode;
@@ -7,6 +8,7 @@ type Props = {
 export default function DefaultLayout({ children }: Props) {
 	return (
 		<LayoutWrapper>
+			<Sidebar />
 			<Content>{children}</Content>
 		</LayoutWrapper>
 	);
@@ -15,8 +17,6 @@ export default function DefaultLayout({ children }: Props) {
 const LayoutWrapper = styled('div')({});
 
 const Content = styled('main')({
-	marginLeft: '1rem',
-	marginRight: '1rem',
-	marginTop: '1rem',
-	marginBottom: '1rem',
+	maxWidth: '980px',
+	margin: '1rem 1rem 1rem 250px',
 });

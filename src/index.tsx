@@ -8,6 +8,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import theme from './theme';
 
+import 'react-loading-skeleton/dist/skeleton.css';
+
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement,
 );
