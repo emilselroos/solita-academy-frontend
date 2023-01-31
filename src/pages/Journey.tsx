@@ -42,13 +42,12 @@ const Journey = () => {
 			.then((response) => response.json())
 			.then((jsonData) => {
 				const journeyData = jsonData.data;
-				console.log(journeyData);
 				setJourney(journeyData);
 			})
 			.catch((error) => {
 				console.error(error);
 			});
-	}, []);
+	}, [jid]);
 
 	return (
 		<>
