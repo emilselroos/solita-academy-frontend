@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { API_ENDPOINT } from '../CONSTANTS';
 
 interface IJourney {
 	JID: number;
@@ -38,7 +39,7 @@ const Journey = () => {
 	const [journey, setJourney] = useState<IJourney | undefined>(undefined);
 
 	useEffect(() => {
-		fetch(`http://localhost:4820/journeys/${jid}`)
+		fetch(`${API_ENDPOINT}/journeys/${jid}`)
 			.then((response) => response.json())
 			.then((jsonData) => {
 				const journeyData = jsonData.data;
