@@ -110,8 +110,8 @@ const Station = () => {
 
 				<Divider style={{ marginTop: '2rem', marginBottom: '2rem' }} />
 
-				<Grid container textAlign="center">
-					<Grid item sm={12} md={6}>
+				<Grid container textAlign="center" spacing={4}>
+					<Grid item xs={12} sm={12} md={6}>
 						<Typography variant="h3">
 							Departuring journeys
 						</Typography>
@@ -129,7 +129,7 @@ const Station = () => {
 							<Skeleton count={7} height={24} width={300} />
 						)}
 					</Grid>
-					<Grid item sm={12} md={6}>
+					<Grid item xs={12} sm={12} md={6}>
 						<Typography variant="h3">Returning journeys</Typography>
 						{station ? (
 							<ReturningJourneysStatistics
