@@ -41,7 +41,7 @@ const columns: GridColDef[] = [
 			const { row } = params;
 			return (
 				<Link
-					to={`/stations/${row.departure_station?.station_number}`}
+					to={`/stations/${row.departure_station_id}`}
 					style={{ fontWeight: 'bold' }}
 				>
 					{row.departure_station?.name}
@@ -57,7 +57,7 @@ const columns: GridColDef[] = [
 			const { row } = params;
 			return (
 				<Link
-					to={`/stations/${row.return_station?.station_number}`}
+					to={`/stations/${row.return_station_id}`}
 					style={{ fontWeight: 'bold' }}
 				>
 					{row.return_station?.name}

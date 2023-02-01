@@ -34,6 +34,12 @@ const theme = createTheme({
 			margin: '0 0 0.5rem 0',
 			fontWeight: 'bold',
 		},
+		h3: {
+			fontSize: '1.2em',
+			color: '#202020',
+			margin: '0 0 0.5rem 0',
+			fontWeight: 'bold',
+		},
 	},
 
 	breakpoints: {
