@@ -23,11 +23,8 @@ const DeparturingJourneysStatistics = ({
 			<strong>{journeysCount?.toLocaleString()}</strong>
 			<Box sx={{ margin: '1rem 0' }}>
 				{topStations.map((station: any, index: number) => (
-					<Typography variant="body1" lineHeight={2}>
-						<Link
-							key={index + 1}
-							to={`/stations/${station.return_station_id}`}
-						>
+					<Typography key={index + 1} variant="body1" lineHeight={2}>
+						<Link to={`/stations/${station.return_station_id}`}>
 							{index + 1}. {station.name}
 						</Link>
 					</Typography>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { styled, Theme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Sidebar from '../components/Sidebar';
 
 type Props = {
