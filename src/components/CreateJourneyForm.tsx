@@ -58,7 +58,7 @@ const CreateJourneyForm = () => {
 		validationSchema: ScreateStationSchema,
 		initialValues: initialValues,
 		onSubmit: async (values, actions) => {
-			console.log({ values, actions });
+			// console.log({ values, actions });
 			const response = await fetch(`${API_ENDPOINT}/journeys`, {
 				method: 'POST',
 				headers: {
