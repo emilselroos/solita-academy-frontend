@@ -20,7 +20,9 @@ const DeparturingJourneysStatistics = ({
 			<Tooltip title="Departuring journeys">
 				<CallMadeIcon />
 			</Tooltip>{' '}
-			<strong>{journeysCount?.toLocaleString()}</strong>
+			<div id="departuring-count">
+				<strong>{journeysCount?.toLocaleString()}</strong>
+			</div>
 			<Box sx={{ margin: '1rem 0' }}>
 				{topStations.map((station: any, index: number) => (
 					<Typography key={index + 1} variant="body1" lineHeight={2}>
@@ -30,10 +32,12 @@ const DeparturingJourneysStatistics = ({
 					</Typography>
 				))}
 			</Box>
-			<small>
-				<strong>Average distance:</strong>
-				<br /> {averageDistance} meters
-			</small>
+			<div id="departuring-average-distance">
+				<small>
+					<strong>Average distance:</strong>
+					<br /> {averageDistance} meters
+				</small>
+			</div>
 		</>
 	);
 };

@@ -99,7 +99,7 @@ const Journey = () => {
 						>
 							From
 							<br />
-							<strong>
+							<strong id="station-from">
 								{journey ? (
 									<Link
 										to={`/stations/${journey.departure_station_id}`}
@@ -134,7 +134,7 @@ const Journey = () => {
 						>
 							To
 							<br />
-							<strong>
+							<strong id="station-to">
 								{journey ? (
 									<Link
 										to={`/stations/${journey.return_station_id}`}

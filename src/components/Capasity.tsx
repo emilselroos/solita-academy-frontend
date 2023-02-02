@@ -7,7 +7,10 @@ type Props = {
 
 const Capasity = ({ capasity }: Props) => {
 	return (
-		<div style={{ display: 'flex', justifyContent: 'center' }}>
+		<div
+			id="station-capasity"
+			style={{ display: 'flex', justifyContent: 'center' }}
+		>
 			<Tooltip title="Capasity">
 				<PedalBikeIcon style={{ marginRight: '0.5rem' }} />
 			</Tooltip>{' '}
