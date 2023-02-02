@@ -88,19 +88,23 @@ const columns: GridColDef[] = [
 const Journeys = () => {
 	const [loading, setLoading] = useState<boolean>(true);
 	const [journeys, setJourneys] = useState<IJourney[] | []>([]);
+	const [page, setPage] = useState<number>(0);
 	const [pageSize, setPageSize] = useState<number>(20);
+	const [totalCount, setTotalCount] = useState<number>(0);
 	useEffect(() => {
-		fetch(`${API_ENDPOINT}/journeys`)
+		setLoading(true);
+		fetch(`${API_ENDPOINT}/journeys?limit=${pageSize}&page=${page}`)
 			.then((response) => response.json())
 			.then((jsonData) => {
-				const journeys = jsonData.data;
+				const { journeys, totalCount } = jsonData.data;
 				setJourneys(journeys);
+				setTotalCount(totalCount);
 				setLoading(false);
 			})
 			.catch((error) => {
 				console.error(error);
 			});
-	}, []);
+	}, [pageSize, page]);
 
 	return (
 		<>
@@ -121,11 +125,16 @@ const Journeys = () => {
 				sx={{ height: 800, width: '100%', backgroundColor: '#FFFFFF' }}
 			>
 				<DataGrid
+					paginationMode="server"
 					getRowId={(row) => row.JID}
+					pagination
 					loading={loading}
 					rows={journeys}
+					rowCount={totalCount}
 					columns={columns}
+					page={page}
 					pageSize={pageSize}
+					onPageChange={(newPage) => setPage(newPage)}
 					onPageSizeChange={(pageSize: number) =>
 						setPageSize(pageSize)
 					}
