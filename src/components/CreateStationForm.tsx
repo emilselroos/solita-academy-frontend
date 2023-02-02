@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
-import { styled } from '@mui/system';
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import AlertCard from './AlertCard';
 import { API_ENDPOINT } from '../CONSTANTS';
 
 interface FormValues {
@@ -78,10 +77,7 @@ const CreateStationForm = () => {
 			<Grid container spacing={2}>
 				{alert && (
 					<Grid item xs={12}>
-						<AlertCard type={alert.type}>
-							{alert.type === 'error' && <strong>Error:</strong>}{' '}
-							{alert.message}
-						</AlertCard>
+						<AlertCard type={alert.type} message={alert.message} />
 					</Grid>
 				)}
 
@@ -217,10 +213,5 @@ const CreateStationForm = () => {
 		</form>
 	);
 };
-
-const AlertCard = styled(Card)(({ type }: AlertProps) => ({
-	backgroundColor: type === 'error' ? '#F8A7A6' : '#A8F1C6',
-	padding: '1rem',
-}));
 
 export default CreateStationForm;
